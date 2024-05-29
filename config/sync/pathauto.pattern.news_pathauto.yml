@@ -1,0 +1,22 @@
+uuid: 11318a58-d6d0-4a96-8202-b4b1254d980d
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: news_pathauto
+label: 'Pathauto para notícias'
+type: 'canonical_entities:node'
+pattern: '/noticias/[node:title]'
+selection_criteria:
+  e87eeccc-cc28-44e2-9e21-c8f799ff2ca6:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: e87eeccc-cc28-44e2-9e21-c8f799ff2ca6
+    context_mapping:
+      node: node
+    bundles:
+      news: news
+selection_logic: and
+weight: -5
+relationships: {  }
