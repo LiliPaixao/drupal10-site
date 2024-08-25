@@ -1,10 +1,9 @@
-uuid: a3971299-8fd3-4d35-bd40-41786c08057b
+uuid: 2d55f6c1-7f98-4e69-8f2f-d9d0ae21504f
 langcode: en
 status: true
 dependencies:
   config:
     - node.type.article
-    - node.type.news
     - node.type.page
     - taxonomy.vocabulary.tags
   module:
@@ -30,26 +29,19 @@ permissions:
   - 'access toolbar'
   - 'administer url aliases'
   - 'create article content'
-  - 'create news content'
   - 'create page content'
   - 'create terms in tags'
   - 'create url aliases'
-  - 'delete any news content'
   - 'delete article revisions'
   - 'delete own article content'
   - 'delete own files'
-  - 'delete own news content'
   - 'delete own page content'
   - 'delete page revisions'
-  - 'edit any news content'
   - 'edit own article content'
   - 'edit own comments'
-  - 'edit own news content'
   - 'edit own page content'
   - 'edit terms in tags'
   - 'revert all revisions'
-  - 'revert news revisions'
   - 'view all revisions'
-  - 'view news revisions'
   - 'view own unpublished content'
   - 'view the administration theme'

@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: UvSCt3S_NldJPFzvhSNOy9vWoPPFhmsmTC12vtVss9s
+  default_config_hash: ug4-rUG_KE9H5v1RaDLLpkSZsu70E9HnJp6sqFfjvHk
 favicon:
   use_default: true
 features:
@@ -15,7 +15,7 @@ third_party_settings:
 preset_accent_color: blue
 preset_focus_color: gin
 enable_darkmode: '0'
-classic_toolbar: classic
+classic_toolbar: vertical
 secondary_toolbar_frontend: true
 high_contrast_mode: false
 accent_color: ''
@@ -23,3 +23,4 @@ focus_color: ''
 layout_density: default
 show_description_toggle: false
 show_user_theme_settings: false
+sticky_action_buttons: false
