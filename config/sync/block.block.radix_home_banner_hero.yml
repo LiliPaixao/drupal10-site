@@ -1,0 +1,30 @@
+uuid: d4dd6be3-04e2-4c43-9020-3ee83010ec57
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:914c940d-ae37-4dd4-a0db-84039b843517'
+  module:
+    - block_content
+    - system
+  theme:
+    - radix
+id: radix_home_banner_hero
+theme: radix
+region: navbar_branding
+weight: 0
+provider: null
+plugin: 'block_content:914c940d-ae37-4dd4-a0db-84039b843517'
+settings:
+  id: 'block_content:914c940d-ae37-4dd4-a0db-84039b843517'
+  label: 'Home: Banner Hero'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

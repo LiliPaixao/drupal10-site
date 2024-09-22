@@ -11,6 +11,7 @@ module:
   ckeditor5: 0
   comment: 0
   commerce: 0
+  components: 0
   config: 0
   config_partial_export: 0
   contact: 0
@@ -57,4 +58,6 @@ theme:
   olivero: 0
   claro: 0
   gin: 0
+  radix: 0
+  radix_subt: 0
 profile: standard

@@ -1,0 +1,22 @@
+uuid: 6b6990c2-b79c-4990-80af-d45d2206c36a
+langcode: en
+status: true
+dependencies:
+  theme:
+    - radix_subt
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: radix_subt_primary_local_tasks
+theme: radix_subt
+region: navbar_branding
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }
