@@ -1,10 +1,10 @@
-uuid: 2d23cf3b-47c9-4fe3-9aab-a6af7731532b
+uuid: b731d1b5-c679-4f31-a50a-f0fc97d7f351
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.banner
-    - field.field.block_content.banner.field_image
+    - field.field.block_content.banner.field_imagem
     - field.field.block_content.banner.field_title
     - image.style.thumbnail
   module:
@@ -14,7 +14,7 @@ targetEntityType: block_content
 bundle: banner
 mode: default
 content:
-  field_image:
+  field_imagem:
     type: image_image
     weight: 27
     region: content

@@ -1,8 +1,8 @@
-uuid: f8b86724-1e3d-4ea6-99f7-cc99b48eb97e
+uuid: f8db00ab-3165-4056-8dbe-c2939cdbcb76
 langcode: en
 status: true
 dependencies: {  }
 id: banner
 label: Banner
-revision: 1
+revision: true
 description: 'Inserção de banner no site'

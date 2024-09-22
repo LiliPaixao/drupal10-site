@@ -1,10 +1,10 @@
-uuid: bfb80746-5d47-4ae6-8949-b4953edf6792
+uuid: 64b37ce9-8b57-445a-9e8a-38b78e593c84
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.banner
-    - field.field.block_content.banner.field_image
+    - field.field.block_content.banner.field_imagem
     - field.field.block_content.banner.field_title
   module:
     - image
@@ -13,9 +13,9 @@ targetEntityType: block_content
 bundle: banner
 mode: default
 content:
-  field_image:
+  field_imagem:
     type: image
-    label: above
+    label: hidden
     settings:
       image_link: ''
       image_style: ''
@@ -26,7 +26,7 @@ content:
     region: content
   field_title:
     type: string
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }

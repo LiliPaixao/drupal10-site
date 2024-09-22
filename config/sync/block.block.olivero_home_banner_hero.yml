@@ -1,0 +1,30 @@
+uuid: 337c20df-fa16-4eba-8879-2291f6d057f9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:banner:914c940d-ae37-4dd4-a0db-84039b843517'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: olivero_home_banner_hero
+theme: olivero
+region: hero
+weight: 0
+provider: null
+plugin: 'block_content:914c940d-ae37-4dd4-a0db-84039b843517'
+settings:
+  id: 'block_content:914c940d-ae37-4dd4-a0db-84039b843517'
+  label: 'Home: Banner Hero'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'
