@@ -9,7 +9,7 @@ _core:
 id: radix_subt_primary_admin_actions
 theme: radix_subt
 region: navbar_branding
-weight: -5
+weight: -7
 provider: null
 plugin: local_actions_block
 settings:
