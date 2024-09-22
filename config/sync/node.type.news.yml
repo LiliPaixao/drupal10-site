@@ -1,4 +1,4 @@
-uuid: 0c2b0115-eb17-4325-9ae0-fa7d09c1b38a
+uuid: fbf04525-daad-40d8-b817-0ae0520d98ac
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ third_party_settings:
     parent: 'main:'
 name: Notícias
 type: news
-description: 'Cadastro de notícias do portal'
+description: 'Cadastro de notícias no portal'
 help: ''
 new_revision: true
 preview_mode: 1

@@ -1,4 +1,4 @@
-uuid: 8a7dd349-c4b0-4166-9f73-356a1f563a7a
+uuid: b6175461-bbc5-4bd9-b660-c79e5d26011c
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ field_name: field_tags
 entity_type: node
 bundle: news
 label: Tags
-description: 'Entrar com separação por vírgula das tags, por exemplo: Amsterdam, Mexico City, "Cleveland, Ohio"'
+description: 'Entrar com separação por vírgula das tags. Por exemplo: Amsterdam, Mexico City, "Cleveland, Ohio"'
 required: true
 translatable: false
 default_value: {  }

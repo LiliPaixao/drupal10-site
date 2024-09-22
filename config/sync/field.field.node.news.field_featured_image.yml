@@ -1,4 +1,4 @@
-uuid: 4809f04c-0ca2-437f-97b8-eb70c50ecd4e
+uuid: 739a85e5-988f-4ef0-8351-a806efbf3ee3
 langcode: en
 status: true
 dependencies:
@@ -11,7 +11,7 @@ id: node.news.field_featured_image
 field_name: field_featured_image
 entity_type: node
 bundle: news
-label: 'imagem de destaque'
+label: 'Imagem de destaque'
 description: 'Imagem principal da notícia'
 required: false
 translatable: false
