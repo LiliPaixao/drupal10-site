@@ -865,7 +865,6 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
 # $settings['migrate_file_private_path'] = '';
 $settings['config_sync_directory'] = '../config/sync';
 
-
 /**
  * Load local development override configuration, if available.
  *
