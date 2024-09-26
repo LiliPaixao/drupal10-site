@@ -1,0 +1,40 @@
+name: radix_subtNew
+description: ''
+screenshot: screenshot.png
+'alt text': 'radix_subtNew theme screenshot'
+core_version_requirement: ^10
+engine: twig
+type: theme
+'base theme': radix
+starterkit: true
+dependencies:
+  - 'drupal:serialization'
+'interface translation project': radix_subtNew
+'interface translation server pattern': themes/custom/radix_subtNew/translations/%language.po
+regions:
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
+  header: Header
+  content: Content
+  page_bottom: 'Page bottom'
+  footer: Footer
+libraries:
+  - radix_subtNew/style
+ckeditor5-stylesheets:
+  - build/css/main.style.css
+libraries-extend:
+  core/drupal.ajax:
+    - radix_subtNew/drupal.ajax
+  core/drupal.checkbox:
+    - radix_subtNew/drupal.checkbox
+  core/drupal.message:
+    - radix_subtNew/drupal.message
+  core/drupal.progress:
+    - radix_subtNew/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - radix_subtNew/jquery.validate
+version: 1.0.0
+project: radix
+datestamp: 1726748819
+generator: 'radix_starterkit:6.0.0-rc5'

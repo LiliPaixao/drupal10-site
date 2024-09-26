@@ -1,35 +1,40 @@
 name: radix_subt
-description: A theme based on Radix.
+description: ''
 screenshot: screenshot.png
-core_version_requirement: ^8.7.7 || ^9.0 || ^10
-# version: VERSION
+'alt text': 'radix_subt theme screenshot'
+core_version_requirement: ^10
 engine: twig
 type: theme
-base theme: radix
-
+'base theme': radix
+starterkit: true
+dependencies:
+  - 'drupal:serialization'
 'interface translation project': radix_subt
-'interface translation server pattern': 'themes/custom/radix_subt/translations/%language.po'
-
+'interface translation server pattern': themes/custom/radix_subt/translations/%language.po
 regions:
-  navbar_branding: Navbar branding
-  navbar_left: Navbar left
-  navbar_right: Navbar right
+  navbar_branding: 'Navbar branding'
+  navbar_left: 'Navbar left'
+  navbar_right: 'Navbar right'
   header: Header
   content: Content
-  page_bottom: Page bottom
+  page_bottom: 'Page bottom'
   footer: Footer
-
 libraries:
   - radix_subt/style
-
-ckeditor_stylesheets:
+ckeditor5-stylesheets:
   - build/css/main.style.css
-
-components:
-  namespaces:
-    radix_subt: src/components
-
-# Information added by Drupal.org packaging script on 2024-04-29
-version: '5.0.12'
-project: 'radix'
-datestamp: 1714376192
+libraries-extend:
+  core/drupal.ajax:
+    - radix_subt/drupal.ajax
+  core/drupal.checkbox:
+    - radix_subt/drupal.checkbox
+  core/drupal.message:
+    - radix_subt/drupal.message
+  core/drupal.progress:
+    - radix_subt/drupal.progress
+  clientside_validation_jquery/cv.jquery.validate:
+    - radix_subt/jquery.validate
+version: 1.0.0
+project: radix
+datestamp: 1726748819
+generator: 'radix_starterkit:6.0.0-rc5'

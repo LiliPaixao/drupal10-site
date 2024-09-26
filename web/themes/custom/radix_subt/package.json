@@ -1,6 +1,6 @@
 {
-	"name": "radix_subtheme",
-	"description": "My custom Radix subtheme",
+	"name": "radix_subt",
+	"description": "A custom Radix subtheme, based on Bootstrap 5.",
 	"private": true,
 	"engines": {
 		"npm": ">=6.0",
@@ -12,6 +12,9 @@
 		"postinstall": "find node_modules/ -name '*.info' -type f -delete",
 		"dev": "mix",
 		"watch": "mix watch",
+		"biome:format": "biome format --write src/ components/",
+		"biome:lint": "biome lint --apply src/ components/",
+		"biome:check": "biome check --apply src/ components/",
 		"stylint": "npx stylelint '**/*.scss'",
 		"stylint-fix": "npx stylelint '**/*.scss' --fix",
 		"watch-poll": "mix watch -- --watch-options-poll=1000",
@@ -19,9 +22,12 @@
 		"production": "mix --production"
 	},
 	"devDependencies": {
-		"@popperjs/core": "^2.9.2",
-		"autoprefixer": "10.4.5",
-		"bootstrap": "^5.2.0",
+		"@biomejs/biome": "^1.4.1",
+		"drupal-radix-cli": "^1.0.6",
+		"@popperjs/core": "^2.11.8",
+		"autoprefixer": "^10.4.5",
+		"bootstrap": "^5.3.3",
+		"dotenv": "^16.3.1",
 		"browser-sync": "^2.11.2",
 		"browser-sync-webpack-plugin": "^2.3.0",
 		"cross-env": "^7.0.3",
