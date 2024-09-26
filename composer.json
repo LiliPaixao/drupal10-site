@@ -19,7 +19,7 @@
         "drupal/address": "^2.0",
         "drupal/admin_toolbar": "^3.4",
         "drupal/commerce": "^2.39",
-        "drupal/components": "^3.0@beta",
+        "drupal/components": "^3.1",
         "drupal/config_partial_export": "^2.0@alpha",
         "drupal/core-composer-scaffold": "^10.2",
         "drupal/core-project-message": "^10.2",
