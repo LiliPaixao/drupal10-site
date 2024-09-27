@@ -2996,10 +2996,6 @@ function withinMaxClamp(min, value, max) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   Toast: function() { return /* reexport default from dynamic */ bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_10___default.a; },
-/* harmony export */   Tooltip: function() { return /* reexport default from dynamic */ bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_11___default.a; }
-/* harmony export */ });
 /* harmony import */ var bootstrap_js_dist_alert__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/js/dist/alert */ "./node_modules/bootstrap/js/dist/alert.js");
 /* harmony import */ var bootstrap_js_dist_alert__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_alert__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var bootstrap_js_dist_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap/js/dist/button */ "./node_modules/bootstrap/js/dist/button.js");
@@ -3020,10 +3016,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap_js_dist_scrollspy__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_scrollspy__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var bootstrap_js_dist_tab__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! bootstrap/js/dist/tab */ "./node_modules/bootstrap/js/dist/tab.js");
 /* harmony import */ var bootstrap_js_dist_tab__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_tab__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! bootstrap/js/dist/toast */ "./node_modules/bootstrap/js/dist/toast.js");
-/* harmony import */ var bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! bootstrap/js/dist/tooltip */ "./node_modules/bootstrap/js/dist/tooltip.js");
-/* harmony import */ var bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _tooltip_init__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./_tooltip-init */ "./src/js/_tooltip-init.js");
+/* harmony import */ var _toast_init__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./_toast-init */ "./src/js/_toast-init.js");
 // Bootstrap JS.
 // Comment out the library you are not using.
 // -----------------------------------------------------------------------------
@@ -3042,6 +3036,90 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/js/_toast-init.js":
+/*!*******************************!*\
+  !*** ./src/js/_toast-init.js ***!
+  \*******************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/js/dist/toast */ "./node_modules/bootstrap/js/dist/toast.js");
+/* harmony import */ var bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_0__);
+function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+
+
+// * Run toasts on page load
+(function () {
+  document.addEventListener("DOMContentLoaded", function () {
+    var toastElList = _toConsumableArray(document.querySelectorAll(".toast"));
+    var _iterator = _createForOfIteratorHelper(toastElList),
+      _step;
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var toastEl = _step.value;
+        var toast = new (bootstrap_js_dist_toast__WEBPACK_IMPORTED_MODULE_0___default())(toastEl, {
+          autohide: false
+        });
+        toast.show();
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+  });
+})();
+
+// * Run toasts on button trigger example
+// (() => {
+//   document.addEventListener("DOMContentLoaded", () => {
+//     const toastTrigger = document.getElementById('liveToastBtn');
+//     const toastLiveExample = document.getElementById('liveToast');
+
+//     if (toastTrigger && toastLiveExample) {
+//       const toastBootstrap = Toast.getOrCreateInstance(toastLiveExample);
+//       toastTrigger.addEventListener('click', () => {
+//         toastBootstrap.show();
+//       });
+//     }
+//   });
+// })();
+
+/***/ }),
+
+/***/ "./src/js/_tooltip-init.js":
+/*!*********************************!*\
+  !*** ./src/js/_tooltip-init.js ***!
+  \*********************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap/js/dist/tooltip */ "./node_modules/bootstrap/js/dist/tooltip.js");
+/* harmony import */ var bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_0__);
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+
+(function () {
+  var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+  var tooltipList = _toConsumableArray(tooltipTriggerList).map(function (tooltipTriggerEl) {
+    return new (bootstrap_js_dist_tooltip__WEBPACK_IMPORTED_MODULE_0___default())(tooltipTriggerEl);
+  });
+})();
+
+/***/ }),
+
 /***/ "./src/js/main.script.js":
 /*!*******************************!*\
   !*** ./src/js/main.script.js ***!
@@ -3051,18 +3129,10 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./_bootstrap */ "./src/js/_bootstrap.js");
+// * Bootstrap libraries
 
-(function () {
-  // * Tooltip initialization, remove it if not necessary
-  document.querySelectorAll('[data-toggle="tooltip"]').forEach(function (tooltipElement) {
-    return new _bootstrap__WEBPACK_IMPORTED_MODULE_0__.Tooltip(tooltipElement);
-  });
 
-  // * Toast initialization, remove it if not necessary
-  document.querySelectorAll('.toast').forEach(function (toastElement) {
-    return new _bootstrap__WEBPACK_IMPORTED_MODULE_0__.Toast(toastElement);
-  });
-})();
+// * Any other global site-wide JavaScript should be placed below.
 
 /***/ }),
 
@@ -8204,23 +8274,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/components/block/block.scss":
-/*!*****************************************!*\
-  !*** ./src/components/block/block.scss ***!
-  \*****************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./src/components/offcanvas/_offcanvas.scss":
-/*!**************************************************!*\
-  !*** ./src/components/offcanvas/_offcanvas.scss ***!
-  \**************************************************/
+/***/ "./components/block/block.scss":
+/*!*************************************!*\
+  !*** ./components/block/block.scss ***!
+  \*************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8342,10 +8399,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"/js/main.script": 0,
-/******/ 			"components/offcanvas/offcanvas": 0,
-/******/ 			"components/block/block": 0,
-/******/ 			"css/main.style": 0
+/******/ 			"/build/js/main.script": 0,
+/******/ 			"build/css/main.style": 0,
+/******/ 			"components/block/block": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -8387,7 +8443,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkradix_subtheme"] = self["webpackChunkradix_subtheme"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkradix_subt"] = self["webpackChunkradix_subt"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	}();
@@ -8397,10 +8453,9 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/block/block.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/offcanvas/offcanvas","components/block/block","css/main.style"], function() { return __webpack_require__("./src/components/offcanvas/_offcanvas.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["build/css/main.style","components/block/block"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["build/css/main.style","components/block/block"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["build/css/main.style","components/block/block"], function() { return __webpack_require__("./components/block/block.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()
